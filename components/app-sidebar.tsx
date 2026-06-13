@@ -9,12 +9,9 @@ import {
   FolderKanbanIcon,
   GlobeIcon,
   LayoutDashboardIcon,
-  LogOutIcon,
   ReceiptIcon,
   TruckIcon,
 } from "lucide-react"
-
-import { logout } from "@/app/login/actions"
 
 import {
   Sidebar,
@@ -92,15 +89,6 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
             >
               <GlobeIcon />
               <span>Back to Website</span>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-          <SidebarMenuItem>
-            <SidebarMenuButton
-              tooltip="Sign out"
-              onClick={() => logout()}
-            >
-              <LogOutIcon />
-              <span>Sign out</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

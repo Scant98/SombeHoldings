@@ -9,6 +9,7 @@ import {
 } from "lucide-react"
 
 import { Counter } from "@/components/site/counter"
+import { HeroSlideshow } from "@/components/site/hero-slideshow"
 import { Reveal } from "@/components/site/reveal"
 import { ServiceIcon } from "@/components/site/service-icon"
 import { clients, company, projects, services, stats } from "@/lib/site-data"
@@ -57,36 +58,13 @@ export default function HomePage() {
           </div>
 
           <Reveal delay={150} className="relative hidden lg:block">
-            <div className="absolute inset-0 my-10 overflow-hidden rounded-2xl">
-              <Image
-                src="/projects/door-installation.jpg"
-                alt="Sombe Holdings carpenters installing a hardwood door at Kivule Hospital"
-                fill
-                priority
-                sizes="(min-width: 1024px) 45vw, 0px"
-                className="object-cover"
-              />
-              <div className="absolute right-4 bottom-4 left-4 rounded-xl bg-white/92 p-4 backdrop-blur-sm">
-                <p className="text-ink text-sm font-semibold">
-                  Hardwood door installation, Kivule Hospital
-                </p>
-                <p className="text-ink-soft mt-0.5 text-xs">
-                  Supplied, fitted and finished by our own team
-                </p>
-              </div>
-            </div>
+            <HeroSlideshow className="absolute inset-0 my-10" />
           </Reveal>
         </div>
 
-        {/* Mobile hero image */}
-        <div className="relative mx-4 mb-10 h-64 overflow-hidden rounded-2xl lg:hidden">
-          <Image
-            src="/projects/door-installation.jpg"
-            alt="Sombe Holdings carpenters installing a hardwood door at Kivule Hospital"
-            fill
-            sizes="100vw"
-            className="object-cover"
-          />
+        {/* Mobile hero slideshow */}
+        <div className="px-4 pb-10 lg:hidden">
+          <HeroSlideshow className="h-80" />
         </div>
       </section>
 
